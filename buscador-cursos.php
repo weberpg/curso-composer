@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 
 require 'vendor/autoload.php';
@@ -19,5 +20,5 @@ $buscador = new Buscador($client, $crawler);
 
 $cursos = $buscador->buscar("/cursos.html");
 foreach ($cursos as $curso) {
-    echo exibeMensagem($curso);
+    exibeMensagem($curso);
 }
