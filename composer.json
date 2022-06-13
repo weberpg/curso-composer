@@ -1,0 +1,47 @@
+{
+    "name": "weberpg/buscador-cursos-alura",
+    "description": "aula de composer buscador de cursos",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Guilherme Weber",
+            "email": "weberpg@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.4",
+        "symfony/dom-crawler": "^4.4",
+        "symfony/css-selector": "^5.4"
+    },
+    "autoload": {
+        "classmap": [
+            "./Teste.php"
+        ],
+        "psr-4": {
+            "Alura\\BuscadorDeCursos\\": "src/"
+        },
+        "files": [
+            "functions.php"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9",
+        "squizlabs/php_codesniffer": "*",
+        "phan/phan": "^5.3"
+    },
+    "scripts": {        
+        "cs": "phpcs --standard=PSR2 src/",
+        "phan": "phan --allow-polyfill-parser",
+        "ls":"dir",
+        "check":[            
+            "@phan",
+            "@cs"
+        ]
+    },
+    "scripts-descriptions": {
+        "cs": "Executa o phpcs",
+        "phan": "Executa o phan",
+        "check": "Executa o phan e o phpcs"
+    }
+}
